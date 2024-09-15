@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_page_route/screens/newsfeed_screen.dart';
 import 'package:navigator_page_route/screens/profile_screen.dart';
 import 'package:navigator_page_route/screens/setting_screen.dart';
 
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const ProfileScreen();
+                        return const ProfileScreen(userName: 'Ostad',);
                       },
                     ),
                   );
@@ -52,6 +53,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
                 child: Text('Go to Setting')),
+            SizedBox(height:20),
+            ElevatedButton(
+                onPressed: () {
+                  //Navigator --> Push
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context)
+                        => NewsfeedScreen(validUser: false),
+
+                    ),
+                  );
+                },
+                child: Text('Go to NewsFeed')),
           ],
         ),
       ),

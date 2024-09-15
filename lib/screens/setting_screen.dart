@@ -36,7 +36,7 @@ class _SettingScreenState extends State<SettingScreen> {
                       context,
                       MaterialPageRoute(
                           builder: (builder) => const HomeScreen()),
-                      (valu) => true,); // remove all or Kill all previous stack
+                      (valu) => false,); // remove all or Kill all previous stack
                 },
                 child: Text('Push And Remove Untill')),
           ],

@@ -38,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
                 child: Text('Go to Profile')),
+            SizedBox(height:20),
             ElevatedButton(
                 onPressed: () {
                   //Navigator --> Push

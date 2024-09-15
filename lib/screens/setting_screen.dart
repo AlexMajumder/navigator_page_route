@@ -10,6 +10,26 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          'Setting',
+          style: (TextStyle(
+            color: Colors.black,
+          )),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: (){
+              Navigator.pop(context);// Back the Previous Screen
+            }, child: Text('Back to Home')),
+          ],
+        ),
+      ),
+    );
   }
 }
